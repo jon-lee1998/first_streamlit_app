@@ -1,3 +1,3 @@
 import streamlit
 
-header('test')
+streamlit.header('test')
