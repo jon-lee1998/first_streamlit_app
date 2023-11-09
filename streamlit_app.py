@@ -33,7 +33,7 @@ def get_fruit_load_list(cursor):
   return cursor.fetchall()
 
 def insert_row_snowflake(cursor, fruit_name):
-  cursor.execute("insert into fruit_load_list(fruit_name) values (' + fruit_name + ')")
+  cursor.execute("insert into fruit_load_list(fruit_name) values ('" + fruit_name + "')")
   return "Thanks for adding " + fruit_name + "to the fruit list in Snowflake!"
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
