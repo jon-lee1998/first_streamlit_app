@@ -47,10 +47,6 @@ def display_fruit_data(cursor):
 
 fruit_add = streamlit.text_input("What fruit would you like to add?")
 add_button = streamlit.button("Add fruit to list")
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-display_fruit_data(my_cur)
-my_cnx.close()
 if add_button:
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   my_cur = my_cnx.cursor()
