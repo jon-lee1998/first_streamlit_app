@@ -5,7 +5,7 @@ import snowflake.connector as cn
 from urllib.error import URLError
 
 
-connection = cn.(
+connection = cn.connect(
   user="1026303",
   password="ElderBerry42!",
   account="JPQYJYD-KEMPER",
